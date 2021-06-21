@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="icon" href="img/logo_black.jpg" />
+    <link rel="stylesheet" href="css/access.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+       <!-- ハンバーガーメニュー部分 -->
+        <div class="drawer">
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+          <input type="checkbox" id="drawer-check" class="drawer-hidden" />
+
+          <!-- ハンバーガーアイコン -->
+          <label for="drawer-check" class="drawer-open"><span></span></label>
+
+          <!-- メニュー -->
+          <nav class="drawer-content">
+            <ul class="drawer-list">
+              <li class="drawer-item" id="li_h">
+                <a href="/index.html" target="_blank">Home</a>
+              </li>
+              <!-- /.drawer-item -->
+              <li class="drawer-item" id="li_m">
+                <a href="/menu.html" target="_blank">Menu</a>
+              </li>
+              <!-- /.drawer-item -->
+              <li class="drawer-item" id="li_r">
+                <a href="http://localhost:3000" target="_blank"
+                  >Reservation</a
+                >
+              </li>
+              <!-- /.drawer-item -->
+              <li class="drawer-item" id="li_n">
+                <a href="/news.html" target="_blank">News</a>
+              </li>
+              <!-- /.drawer-item -->
+              <li class="drawer-item" id="li_i">
+                <a href="https://instagram.com/ushibudou?utm_medium=copy_link" target="_blank">Instagram</a>
+              </li>
+              <!-- /.drawer-item -->
+            </ul>
+            <!-- /.drawer-list -->
+          </nav>
+        </div>
+    </header>
+    <div class="video_info">
+      <video id="video_info" src="video/info.mp4" controls="controls" autoplay loop muted playsinline></video>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        var video = $('video').get(0);
+        $('.music_info').on('click', function () {
+          if (video.muted) {
+            video.muted = false;
+          } else {
+            video.muted = true;
+          }
+        });
+      });
+    </script>
+
+    <div class="logo_img_info">
+      <img src="img/logo-white.png" />
+    </div>
+
+    <div class="music_info"><p>play&#9834;</p></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <div class="instagram_info">
+      <a href="https://instagram.com/ushibudou?utm_medium=copy_link" target="_blank"
+        ><img src="img/insta.png" class="icon" alt=""
+      /></a>
+    </div>
+    <label for="modal-check" class="earth"></label>
+    <input type="checkbox" id="modal-check" />
+
+    <div class="modal">
+      <label for="modal-check" class="check">&#x2715</label>
+      <div class="modal_map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.0334956884008!2d135.5571538507408!3d34.67910408034397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e08147f2d8db%3A0x7f64ab903ad96e8b!2z44CSNTM2LTAwMjEg5aSn6Ziq5bqc5aSn6Ziq5biC5Z-O5p2x5Yy66KuP6Kiq77yU5LiB55uu77yU4oiS77yX!5e0!3m2!1sja!2sjp!4v1621656553277!5m2!1sja!2sjp" 
+       ></iframe>
+      </div> 
+      <div class="address">
+        <p>&lt; 住所 &gt;</p>
+        <p class="address-details">大阪府大阪市城東区諏訪4&minus;4&minus;7 ミキビル 1F</p>
+      </div>
+      <div class="transportation">
+        <p>&lt; アクセス &gt;</p>
+        <p class="accesss-details">地下鉄中央線 深江橋駅 2番出口から徒歩1分</p>
+      </div>
+      <div class="tell">
+        <p>&lt; 電話 &gt;</p>
+        <p class="tell-details">06&minus;6180&minus;424</p>
+      </div> 
+      <div class="open-time">
+        <p>&lt; 営業時間 &gt;</p>
+        <p class="weekdays">&#10098;月&#8764;金&#10099;15&#58;00&#8764;22&#58;00&nbsp;&#10088;Lo&#46;21&#58;00&#10089;</p>
+        <p class="weekends">&#10098;土&#149;日&#149;祝&#10099;11&#58;30&#8764;22&#58;00&nbsp;&#10088;Lo&#46;21&#58;00&#10089;</p>
+        <p class="day-off">&#10098;定休日&#10099; 火曜日</p>
+      </div>    
+    </div>
+  </body>
+</html>

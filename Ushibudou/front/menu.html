@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="icon" href="img/logo_black.jpg" />
+    <link rel="stylesheet" href="css/menu.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- ハンバーガーメニュー部分 -->
+      <div class="drawer">
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input type="checkbox" id="drawer-check" class="drawer-hidden" />
+
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer-check" class="drawer-open"><span></span></label>
+
+        <!-- メニュー -->
+        <nav class="drawer-content">
+          <ul class="drawer-list">
+            <li class="drawer-item" id="li_h">
+              <a href="/index.html" target="_blank">Home</a>
+            </li>
+            <!-- /.drawer-item -->
+            <li class="drawer-item" id="li_m">
+              <a href="http://localhost:3000" target="_blank">Reservation</a>
+            </li>
+            <!-- /.drawer-item -->
+            <li class="drawer-item" id="li_r">
+              <a href="/access.html" target="_blank">Access</a>
+            </li>
+            <!-- /.drawer-item -->
+            <li class="drawer-item" id="li_n">
+              <a href="/news.html" target="_blank">News</a>
+            </li>
+            <!-- /.drawer-item -->
+            <li class="drawer-item" id="li_i">
+              <a href="https://instagram.com/ushibudou?utm_medium=copy_link" target="_blank">Instagram</a>
+            </li>
+            <!-- /.drawer-item -->
+          </ul>
+          <!-- /.drawer-list -->
+        </nav>
+      </div>
+      <div class="logo_img_menu">
+        <img src="img/logo_black.jpg" />
+      </div>
+    </header>
+    <div id="menu-list">
+      <p class="menu-title">MENU</p>
+      <div class="lunch">Lunch</div>
+      <div class="lunch-content">
+        <span class="lunch-menu">焼肉ランチ</span><span class="lunch-price">&#0165;1&#44;900</span>
+      </div>
+      <div class="special-lunch">
+        <p class="spacial-limit">1日5組限定</p>
+        <span class="special-menu">スペシャルランチコース&#10088;要予約&#10089;</span>
+        <span class="special-price">&#0165;2&#44;980</span>
+      </div>
+      <div class="modal-lunch">
+        <label for="modal-check" class="lunch-details-btn">詳細</label>
+        <input type="checkbox" id="modal-check" />
+        <div class="modal">
+          <label for="modal-check" id="close">&#10005;</label>
+          <div class="menu-details">
+            <p class="regular">焼肉ランチ1&#44;900円&#10088;税込&#10089;</p>
+            <p class="regular-content">
+              キムチ、ナムル、サラダ、お肉盛合せ、ご飯<br />選べるスープ&#10088;テールスープorチゲスープ&#10089;
+            </p>
+            <p class="special">スペシャルランチコース2&#44;980円&#10088;税込&#10089;</p>
+            <p class="special-content">
+              例&#10089;&nbsp;前菜、サラダ、本日の刺しもの、タン食べ比べ、<br />霜降り２種盛り、赤身、自慢のハラミ、<br />
+              ホルモン盛合せ、土鍋ご飯、本日のスープ。<br />その日によって内容が替わります。
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <script type="text/javascript" src="/js/menu.js"></script>
+    </div>
+  </body>
+</html>

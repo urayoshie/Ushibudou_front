@@ -1,0 +1,703 @@
+@import url(sanitize.css);
+
+/* ACCESS */
+
+/*------------------------------
+  ここから下がハンバーガーメニューに関するCSS
+------------------------------*/
+
+.drawer {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  /* 重なり順を一番上に */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #fff;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 10px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 10px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background-color: #ffa500;
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.drawer-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #ffa500;
+  transition: 0.5s;
+  color: #fff;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+  left: 0px;
+  /* メニューを画面に入れる */
+  width: 350px;
+  height: 570px;
+  background-color: #ffa500;
+}
+
+a {
+  color: #fff;
+  font-family: 'Shippori Mincho', serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#li_h {
+  text-align: center;
+  margin: 70px auto;
+}
+
+#li_m {
+  text-align: center;
+  margin: 70px auto;
+}
+
+#li_r {
+  text-align: center;
+  margin: 70px auto;
+}
+
+#li_n {
+  text-align: center;
+  margin: 70px auto;
+}
+
+#li_i {
+  text-align: center;
+  margin: 70px auto;
+}
+
+.drawer-item {
+  transition: 0.3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.drawer-item:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+body {
+  background-color: black;
+}
+
+.video_info {
+  max-width: 80%;
+  height: 83vh;
+  overflow: hidden;
+  /* margin-left: 100px; */
+  margin-top: -60px;
+}
+#video_info {
+  /* object-fit: cover; */
+  /* position: absolute; */
+  max-width: 80%;
+  height: 97vh;
+  top: 0;
+  left: 0;
+  right: 110px;
+}
+
+.logo_img_info {
+  float: right;
+  margin-right: 150px;
+  margin-top: -400px;
+}
+
+.logo_img_info img {
+  max-width: 200px;
+}
+
+.instagram_info img {
+  width: 70px;
+  height: 70px;
+  margin-right: 160px;
+  margin-top: -260px;
+  float: right;
+}
+
+.icon:hover {
+  -webkit-animation: zoom 0.3s;
+  animation: zoom 0.3s;
+}
+
+@-webkit-keyframes zoom {
+  50% {
+    -webkit-transform: scale(1.1);
+  }
+}
+
+@keyframes zoom {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.music_info {
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  color: black;
+  background-color: #cccccc;
+  font-weight: bold;
+  font-family: 'Shippori Mincho', serif;
+  margin-right: 250px;
+  margin-top: -255px;
+  padding-left: 8px;
+  padding-top: 1px;
+  float: right;
+}
+
+/* mapアイコン */
+.music_info:hover {
+  -webkit-animation: zoom 0.3s;
+  animation: zoom 0.3s;
+}
+
+.earth {
+  float: right;
+  margin-right: 208px;
+  margin-top: -190px;
+  position: relative;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  background-color: #ccc;
+  border-radius: 50%;
+  box-shadow: -20px 0 3px rgba(0, 0, 0, 0.3) inset;
+}
+
+.earth:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-x;
+  background-image: url(https://drive.google.com/uc?export=view&id=11chGBx0vAj79X4ph_fUXDQIYdRy9uqBV);
+  background-position: 0 0;
+  background-size: auto 100%;
+  transform: rotate(23.4deg);
+  animation: rotation 16s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.modal {
+  display: none;
+  width: 800px;
+  height: 500px;
+  background-color: #ccc;
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  margin: auto;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
+}
+#modal-check {
+  display: none;
+}
+#modal-check:checked + .modal {
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+}
+label {
+  cursor: pointer;
+}
+
+.check {
+  margin-left: 10px;
+}
+
+.modal_map {
+  margin-top: 20px;
+  margin-left: 10px;
+  max-width: 400px;
+  position: relative;
+  padding-bottom: 50%;
+  padding-top: 30px;
+  /* height: 0; */
+  overflow: hidden;
+}
+
+.modal_map iframe,
+.modal_map object,
+.modal_map embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.address {
+  float: right;
+  margin-right: 17px;
+  margin-top: -440px;
+  font-family: 'Shippori Mincho', serif;
+}
+
+.transportation {
+  float: right;
+  margin-right: 15px;
+  margin-top: -350px;
+  font-family: 'Shippori Mincho', serif;
+}
+
+.tell {
+  float: right;
+  margin-right: 225px;
+  margin-top: -260px;
+  font-family: 'Shippori Mincho', serif;
+}
+
+.open-time {
+  float: right;
+  margin-right: 77px;
+  margin-top: -160px;
+  font-family: 'Shippori Mincho', serif;
+}
+
+@media screen and (max-width: 1024px) {
+  .video_info {
+    max-width: 100%;
+    height: 63vh;
+  }
+
+  #video_info {
+    margin-top: 20px;
+    height: 43vh;
+    max-width: 100%;
+  }
+
+  .logo_img_info {
+    margin-right: 430px;
+    margin-top: -250px;
+  }
+
+  .music_info {
+    margin-right: 525px;
+    margin-top: -95px;
+  }
+
+  .instagram_info img {
+    margin-right: 435px;
+    margin-top: -100px;
+    float: right;
+  }
+
+  .earth {
+    margin-right: 480px;
+    margin-top: -40px;
+  }
+
+  .modal {
+    width: 400px;
+    height: 600px;
+  }
+
+  .modal_map {
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+
+  .address {
+    margin-top: 0px;
+    margin-right: 50px;
+  }
+
+  .address-details {
+    margin-top: -15px;
+  }
+
+  .transportation {
+    margin-top: -15px;
+    margin-right: 50px;
+  }
+
+  .accesss-details {
+    margin-top: -15px;
+  }
+  .tell {
+    margin-top: -15px;
+    margin-right: 112px;
+  }
+
+  .tell-details {
+    margin-top: -18px;
+    margin-right: 150px;
+  }
+
+  .open-time {
+    margin-top: -15px;
+    margin-right: 115px;
+  }
+
+  .weekdays {
+    margin-top: -13px;
+  }
+
+  .weekends {
+    margin-top: -10px;
+  }
+
+  .day-off {
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo_img_info {
+    margin-right: 400px;
+    margin-top: -110px;
+  }
+
+  .music_info {
+    margin-right: 305px;
+    margin-top: -95px;
+  }
+
+  .instagram_info img {
+    margin-right: 215px;
+    margin-top: -100px;
+    float: right;
+  }
+
+  .earth {
+    margin-right: 260px;
+    margin-top: -40px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #video_info {
+    margin-top: 40px;
+  }
+
+  .logo_img_info {
+    margin-right: 305px;
+    margin-top: -80px;
+  }
+
+  .logo_img_info img {
+    max-width: 150px;
+  }
+
+  .music_info {
+    margin-right: 205px;
+    margin-top: -95px;
+  }
+
+  .instagram_info img {
+    margin-right: 115px;
+    margin-top: -100px;
+    float: right;
+  }
+
+  .earth {
+    margin-right: 160px;
+    margin-top: -40px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #video_info {
+    margin-top: 10px;
+  }
+
+  .logo_img_info {
+    margin-right: 35px;
+    margin-top: -80px;
+  }
+
+  .logo_img_info img {
+    max-width: 150px;
+  }
+
+  .music_info {
+    margin-right: 285px;
+    margin-top: -95px;
+  }
+
+  .instagram_info img {
+    margin-right: 200px;
+    margin-top: -100px;
+    float: right;
+  }
+
+  .earth {
+    margin-right: 245px;
+    margin-top: -40px;
+  }
+
+  .modal {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .logo_img_info {
+    margin-right: 20px;
+  }
+
+  .music_info {
+    margin-right: 265px;
+    margin-top: -95px;
+  }
+
+  .instagram_info img {
+    margin-right: 180px;
+    margin-top: -100px;
+    float: right;
+  }
+
+  .earth {
+    margin-right: 225px;
+    margin-top: -40px;
+  }
+
+  .modal {
+    margin-top: 70px;
+  }
+
+  .modal {
+    width: 300px;
+    height: 590px;
+  }
+
+  .modal_map {
+    margin-top: 5px;
+  }
+
+  .address {
+    font-size: 13px;
+    margin-top: 0px;
+    margin-left: 15px;
+  }
+
+  .address-details {
+    font-size: 13px;
+    margin-top: -10px;
+  }
+
+  .transportation {
+    font-size: 13px;
+    margin-left: 15px;
+    margin-top: -15px;
+  }
+
+  .accesss-details {
+    font-size: 13px;
+    margin-top: -10px;
+  }
+
+  .tell {
+    font-size: 13px;
+    margin-top: -15px;
+    margin-right: 28px;
+  }
+
+  .tell-details {
+    font-size: 13px;
+    margin-top: -10px;
+    margin-right: 150px;
+  }
+
+  .open-time {
+    font-size: 13px;
+    margin-top: -15px;
+    margin-left: 15px;
+  }
+
+  .weekdays {
+    font-size: 13px;
+    margin-top: -10px;
+  }
+
+  .weekends {
+    font-size: 13px;
+    margin-top: -1px;
+  }
+
+  .day-off {
+    font-size: 13px;
+    margin-top: -5px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .logo_img_info {
+    margin-right: 25px;
+  }
+
+  .logo_img_info img {
+    max-width: 130px;
+  }
+
+  .music_info {
+    margin-right: 235px;
+    margin-top: -95px;
+  }
+
+  .instagram_info img {
+    margin-right: 150px;
+    margin-top: -100px;
+    float: right;
+  }
+
+  .earth {
+    margin-right: 195px;
+    margin-top: -40px;
+  }
+
+  .address {
+    font-size: 11px;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+
+  .address-details {
+    font-size: 11px;
+    margin-top: -5px;
+  }
+
+  .transportation {
+    font-size: 11px;
+    margin-left: 10px;
+    margin-top: -10px;
+  }
+
+  .accesss-details {
+    font-size: 11px;
+    margin-top: -5px;
+  }
+
+  .tell {
+    font-size: 11px;
+    margin-top: -10px;
+    margin-right: 44px;
+  }
+
+  .tell-details {
+    font-size: 11px;
+    margin-top: -5px;
+    margin-right: 150px;
+  }
+
+  .open-time {
+    font-size: 11px;
+    margin-top: -10px;
+    margin-left: 13px;
+  }
+
+  .weekdays {
+    font-size: 11px;
+    margin-top: -5px;
+  }
+
+  .weekends {
+    font-size: 11px;
+    margin-top: -1px;
+  }
+
+  .day-off {
+    font-size: 11px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .logo_img_info {
+    margin-right: 10px;
+  }
+
+  /* .logo_img_info img {
+    max-width: 130px;
+  } */
+
+  .music_info {
+    margin-right: 205px;
+    margin-top: -95px;
+  }
+
+  .instagram_info img {
+    margin-right: 130px;
+    margin-top: -100px;
+    float: right;
+  }
+
+  .earth {
+    margin-right: 170px;
+    margin-top: -40px;
+  }
+}

@@ -1,0 +1,192 @@
+@import url(sanitize.css);
+
+/* News */
+
+/*------------------------------
+  ここから下がハンバーガーメニューに関するCSS
+------------------------------*/
+
+.drawer {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  /* 重なり順を一番上に */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #fff;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 10px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 10px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background-color: #ffa500;
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.drawer-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #ffa500;
+  transition: 0.5s;
+  color: #fff;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+  left: 0px;
+  /* メニューを画面に入れる */
+  width: 350px;
+  height: 570px;
+  background-color: #ffa500;
+}
+
+a {
+  color: #fff;
+  font-family: 'Shippori Mincho', serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#li_h {
+  text-align: center;
+  margin: 70px auto;
+}
+
+#li_m {
+  text-align: center;
+  margin: 70px auto;
+}
+
+#li_r {
+  text-align: center;
+  margin: 70px auto;
+}
+
+#li_n {
+  text-align: center;
+  margin: 70px auto;
+}
+
+#li_i {
+  text-align: center;
+  margin: 70px auto;
+}
+
+.drawer-item {
+  transition: 0.3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.drawer-item:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.news-title {
+  margin-top: -43px;
+  color: #fff;
+  font-family: 'Shippori Mincho', serif;
+  text-align: center;
+}
+
+#notification-list {
+  font-family: 'Shippori Mincho', serif;
+  margin-top: 40px;
+}
+
+.news-date {
+  margin-right: 30px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.logo_img_news img {
+  width: 150px;
+  text-align: center;
+}
+
+html {
+  height: 100%;
+}
+.sub-body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}

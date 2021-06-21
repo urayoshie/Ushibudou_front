@@ -1,16 +1,27 @@
 @import url(sanitize.css);
 
-/* 動画のバックカラー */
-video {
-  background: #000000;
+/* HOME動画 */
+.video {
+  max-width: 82%;
+  height: 85vh;
+  /* position: relative; */
+  overflow: hidden;
+}
+#video {
+  /* object-fit: cover;
+  position: absolute; */
+  max-width: 100%;
+  height: 93vh;
+  /* top: 0;
+  left: 0;
+  right: 10px; */
 }
 
-.logo_img img{
-  width: 90px;
-  height: 90px;
+.logo_img img {
+  width: 180px;
   float: right;
-  margin-right: 165px;
-  margin-top: -100px;
+  margin-right: 40px;
+  margin-top: -130px;
 }
 
 body {
@@ -19,27 +30,27 @@ body {
 
 /* ヘッダーメニューの設定 */
 .list {
-  width: 200px;
-  margin-left: 1092px;
-  margin-top: -480px;
+  font-family: 'Shippori Mincho', serif;
+  margin-right: 50px;
+  margin-top: -550px;
 }
 
 ul {
   list-style-type: none;
-  line-height: 70px;
+  line-height: 100px;
   text-align: right;
 }
 
 #nav li a {
   text-decoration: none;
-  color: #ffa500;
+  color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .link {
   display: inline-block;
-  transition: .3s;
+  transition: 0.3s;
   -webkit-transform: scale(1);
   transform: scale(1);
 }
@@ -49,42 +60,20 @@ ul {
   transform: scale(1.2);
 }
 
-h1 {
-  color: #fff;
-  font-family: 'Playfair Display',
-  serif;
-  font-size: 19px;
-  float: right;
-  margin-top: -85px;
-  margin-right: 70px;
-}
-h2 {
-  color: #fff;
-  font-family: 'Playfair Display',
-    serif;
-  font-size: 26px;
-  float: right;
-  margin-top: -55px;
-  margin-bottom: -5px;
-  margin-right: 70px;
-}
-
 .instagram img {
-  float: right;
   width: 70px;
   height: 70px;
-  margin-right: 65px;
-  /* margin-left: 1230px; */
+  margin-left: 170px;
   margin-top: 10px;
 }
 
-.icon {
+/* .icon {
   display: inline-block;
-}
+} */
 
 .icon:hover {
-  -webkit-animation: zoom .3s;
-  animation: zoom .3s;
+  -webkit-animation: zoom 0.3s;
+  animation: zoom 0.3s;
 }
 
 @-webkit-keyframes zoom {
@@ -99,10 +88,217 @@ h2 {
   }
 }
 
+.music {
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  color: black;
+  background-color: #cccccc;
+  font-weight: bold;
+  font-family: 'Shippori Mincho', serif;
+  margin-left: 60px;
+  margin-top: -65px;
+  padding-left: 8px;
+  padding-top: 1px;
+}
 
-/* .message {
-  float: right;
-  margin-right: -43px;
-  margin-top: 75px;
-  color: #fff;
-} */
+.music:hover {
+  -webkit-animation: zoom 0.3s;
+  animation: zoom 0.3s;
+}
+
+.background {
+  max-width: 1200px;
+  height: 540px;
+  background-color: #ffa500;
+  margin-top: -405px;
+  margin-left: 300px;
+}
+
+@media screen and (max-width: 1024px) {
+  .video {
+    max-width: 100%;
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  #video {
+    margin-top: -100px;
+    max-width: 100%;
+    height: 50vh;
+  }
+
+  .background {
+    /* height: 8px; */
+    padding-top: 515px;
+    margin-left: 300px;
+  }
+
+  .list {
+    margin-top: -450px;
+  }
+
+  ul {
+    line-height: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .video {
+    height: 73vh;
+  }
+
+  #video {
+    margin-top: -70px;
+    max-width: 100%;
+  }
+
+  .logo_img img {
+    float: left;
+    margin-left: 50px;
+    margin-top: 60px;
+  }
+
+  .list {
+    margin-top: -430px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .video {
+    height: 83vh;
+  }
+
+  #video {
+    margin-top: -50px;
+  }
+
+  .logo_img img {
+    margin-top: 90px;
+    margin-left: 70px;
+    max-width: 130px;
+  }
+
+  .instagram img {
+    width: 60px;
+    height: 60px;
+    margin-left: 150px;
+    margin-top: -20px;
+  }
+
+  .music {
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+    margin-left: 80px;
+    margin-top: -56px;
+    padding-left: 7px;
+  }
+
+  #nav li a {
+    font-size: 20px;
+  }
+}
+
+/* iphone 6,7,8 */
+@media screen and (max-width: 480px) {
+  .video {
+    height: 65vh;
+  }
+
+  #video {
+    margin-top: -80px;
+  }
+
+  .logo_img img {
+    width: 140px;
+    margin-left: 15px;
+    margin-top: 170px;
+  }
+
+  .list {
+    margin-top: -330px;
+    margin-right: 25px;
+  }
+
+  .background {
+    background-color: black;
+  }
+
+  .instagram img {
+    margin-left: 95px;
+  }
+
+  .music {
+    margin-left: 25px;
+  }
+}
+
+/* iphone X */
+@media screen and (max-width: 375px) {
+  .video {
+    height: 65vh;
+  }
+
+  #video {
+    margin-top: -75px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .video {
+    height: 70vh;
+  }
+
+  #video {
+    margin-top: -60px;
+  }
+
+  ul {
+    line-height: 70px;
+  }
+}
+
+/* iphone 5 */
+@media screen and (max-width: 320px) {
+  .video {
+    height: 70vh;
+  }
+
+  #video {
+    margin-top: -60px;
+  }
+
+  .logo_img img {
+    width: 130px;
+  }
+
+  #nav li a {
+    font-size: 18px;
+  }
+
+  .list {
+    margin-top: -330px;
+  }
+}
+
+/* Galaxy Fold */
+@media screen and (max-width: 280px) {
+  .logo_img img {
+    width: 100px;
+  }
+
+  .instagram img {
+    width: 50px;
+    height: 50px;
+    margin-left: 70px;
+    margin-top: -50px;
+  }
+
+  .music {
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    margin-left: 20px;
+  }
+}

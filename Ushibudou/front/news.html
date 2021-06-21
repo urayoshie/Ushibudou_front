@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="icon" href="img/logo_black.jpg" />
+    <link rel="stylesheet" href="css/news.css" />
+  </head>
+
+  <body class="sub-body">
+    <div class="content">
+      <header>
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="drawer">
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+          <input type="checkbox" id="drawer-check" class="drawer-hidden" />
+
+          <!-- ハンバーガーアイコン -->
+          <label for="drawer-check" class="drawer-open"><span></span></label>
+
+          <!-- メニュー -->
+          <nav class="drawer-content">
+            <ul class="drawer-list">
+              <li class="drawer-item" id="li_h">
+                <a href="/index.html" target="_blank">Home</a>
+              </li>
+              <!-- /.drawer-item -->
+              <li class="drawer-item" id="li_m">
+                <a href="http://localhost:3000" target="_blank">Reservation</a>
+              </li>
+              <!-- /.drawer-item -->
+              <li class="drawer-item" id="li_r">
+                <a href="/menu.html" target="_blank">Menu</a>
+              </li>
+              <!-- /.drawer-item -->
+              <li class="drawer-item" id="li_n">
+                <a href="/access.html" target="_blank">Access</a>
+              </li>
+              <!-- /.drawer-item -->
+              <li class="drawer-item" id="li_i">
+                <a href="https://instagram.com/ushibudou?utm_medium=copy_link" target="_blank">Instagram</a>
+              </li>
+              <!-- /.drawer-item -->
+            </ul>
+            <!-- /.drawer-list -->
+          </nav>
+        </div>
+      </header>
+      <h2 class="news-title">News</h2>
+      <div class="container">
+        <div id="notification-list" style="color: white"></div>
+        <script type="text/javascript" src="/js/news.js"></script>
+      </div>
+    </div>
+    <footer>
+      <div class="logo_img_news">
+        <img src="img/logo-white.png" />
+      </div>
+    </footer>
+  </body>
+</html>

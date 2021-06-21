@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="icon" href="img/logo_black.jpg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOME</title>
-  <link rel="icon" href="img/logo_black.jpg">
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <body>
+    <div class="video">
+      <video id="video" src="video/home.mp4" controls="controls" autoplay loop muted playsinline></video>
+    </div>
 
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<body>
-  <video id="video" src="video/home.mp4" controls autoplay loop muted playsinline width="1000" height="635">
-    <!-- <source src="video/home.mp4"> -->
-  </video>
+    <script>
+      // jQuery(function ($) {
+      //   var movie = document.getElementById('video');
+      //   movie.controls = false;
+      // });
+
+      $(function () {
+        var video = $('video').get(0);
+        $('.music').on('click', function () {
+          if (video.muted) {
+            video.muted = false;
+          } else {
+            video.muted = true;
+          }
+        });
+      });
+    </script>
+
     <header>
       <div class="logo_img">
-        <img src="img/logo1-white.png">
+        <img src="img/logo-white.png" />
       </div>
-        <h1>焼肉酒場</h1>
-        <h2>牛葡萄</h2>
+      <div class="background"></div>
       <div class="list">
         <ul id="nav">
-          <li><a href="#" class="link">Menu</a></li>
-          <li><a href="#" class="link">Reservation</a></li>
-          <li><a href="#" class="link">Access</a></li>
-          <li><a href="#" class="link">News</a></li>
+          <li><a href="/menu.html" class="link">Menu</a></li>
+          <li><a href="http://localhost:3000" class="link">Reservation</a></li>
+          <li><a href="/access.html" class="link">Access</a></li>
+          <li><a href="/news.html" class="link">News</a></li>
         </ul>
       </div>
     </header>
-      <div class="instagram">
-        <a href="https://www.facebook.com/dentalinnovationscebu" target="_blank" ><img src="img/insta.png" class="icon" alt="" ></a>
-      </div>
-        <!-- <p class="message">Please check our instagram ▲</p> -->
-</body>
+    <div class="instagram">
+      <a href="https://instagram.com/ushibudou?utm_medium=copy_link" target="_blank"
+        ><img src="img/insta.png" class="icon" alt=""
+      /></a>
+    </div>
 
+    <div class="music"><p>play♪</p></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </body>
 </html>

@@ -108,7 +108,7 @@ ul {
 }
 
 .background {
-  max-width: 1200px;
+  max-width: 100vw;
   height: 540px;
   background-color: #ffa500;
   margin-top: -405px;

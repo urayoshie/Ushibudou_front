@@ -8,7 +8,8 @@
   margin-top: 10px;
   background: black;
   border-radius: 50px;
-  margin-right: 1355px;
+  width: 50px;
+  height: 50px;
 }
 
 /* チェックボックスは非表示に */
@@ -41,6 +42,7 @@
   background: #fff;
   transition: 0.5s;
   position: absolute;
+  margin-right: 10px;
 }
 
 /* 三本線のうち一番上の棒の位置調整 */
@@ -301,7 +303,7 @@ label {
     height: 3px;
     width: 25px;
     border-radius: 3px;
-    background: black;
+    /* background: black; */
     transition: 0.5s;
     position: absolute;
   }
